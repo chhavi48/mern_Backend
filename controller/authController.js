@@ -36,7 +36,7 @@ authController.post("/login", async (req, res) => {
 
     console.log("Login Successfully");
 
-    const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY);
+    const token = jwt.sign({ userId: user._id }, process.env.PORT);
 
     res.status(200).json({ message: "Login Successfull", token });
   } catch (err) {}
